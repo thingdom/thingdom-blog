@@ -1,0 +1,18 @@
+---
+layout: default
+---
+    <div class="brand">
+        <div class="container clearfix">
+            <h1 class="title">
+                <a href="{{ page.url }}" rel="bookmark" title="Permanent Link: {{ page.title }}">
+                    {{ page.title }}
+                </a>
+            </h1>
+            <h5 class="meta">{{ page.date | date: '%B %e, %Y' }}</h5>
+        </div>
+    </div>
+    <div id="content" class="container clearfix">
+        <div class="entry">
+        {{ content }}
+        </div>
+    </div>
