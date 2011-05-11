@@ -14,7 +14,7 @@
     <meta property="og:type" content="article"/>
     <meta property="og:image" content=""/>
 
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
     <link href="http://blog.thethingdom.com/atom.xml" rel="alternate" title="Thingdom Blog" type="application/atom+xml"/>
 
@@ -23,6 +23,10 @@
     <link rel="stylesheet" href="http://www.thethingdom.com/styles/h5bp-base.css"/>
     <link rel="stylesheet" href="http://www.thethingdom.com/styles/common.css"/>
     <style>
+        body {
+            -webkit-text-size-adjust: none;
+        }
+
         .brand .title {
             font-family: Georgia, serif;
             font-weight: normal;
@@ -81,6 +85,19 @@
             position: relative;
             text-align: center;
         }
+
+        @media only screen and (max-width: 767px) {
+            .container {
+                width: 250px;
+            }
+        }
+
+        @media only screen and (min-width: 480px) and (max-width: 767px) {
+            .container {
+                width: 400px;
+            }
+        }
+
     </style>
 
     <!-- TODO: Add Atom feed -->
