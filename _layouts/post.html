@@ -1,21 +1,21 @@
 ---
 layout: default
 ---
-    <div class="brand">
-        <div class="container clearfix">
+    <section>
+        <header>
+            <h4 class="meta">{{ page.date | date: '%B %e, %Y' }}</h4>
             <h1 class="title">
                 <a href="{{ page.url }}" rel="bookmark" title="Permanent Link: {{ page.title }}">
                     {{ page.title }}
                 </a>
             </h1>
-            <h4 class="meta">{{ page.date | date: '%B %e, %Y' }}</h4>
-        </div>
-    </div>
-    <div id="content" class="container clearfix">
-        <div class="entry">
+        </header>
+
+    <article id="content">
+        <section class="entry">
         {{ content }}
-        </div>
-        <div class="share-actions">
+        </section>
+        <section class="share-actions">
             <a href="http://twitter.com/share"
                class="twitter-share-button"
                data-text="{{ page.title }}"
@@ -29,6 +29,6 @@ layout: default
                 href="http://blog.thethingdom.com{{ page.url }}"
                 layout="button_count"
                 send="true"
-                style="top: -2px; margin-left: 2px;"></fb:like>
-        </div>
-    </div>
+                style="top: -3px; margin-left: 2px;"></fb:like>
+        </section>
+    </article>

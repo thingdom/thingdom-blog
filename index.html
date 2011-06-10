@@ -2,25 +2,24 @@
 layout: default
 title: Blog
 ---
-    <div class="brand">
-        <div class="container clearfix">
+    <!-- To create this page, copy _layouts/post.html and replace `page.` with `site.posts[0].` -->
+    <section>
+        <header>
+            <h4 class="meta">{{ site.posts[0].date | date: '%B %e, %Y' }}</h4>
             <h1 class="title">
-                <a href="{{ site.posts[0].url }}" rel="bookmark" title="Permanent Link: {{  site.posts[0].title }}">
+                <a href="{{ site.posts[0].url }}" rel="bookmark" title="Permanent Link: {{ site.posts[0].title }}">
                     {{ site.posts[0].title }}
                 </a>
             </h1>
-            <h4 class="meta">{{ site.posts[0].date | date: '%B %e, %Y' }}</h4>
-        </div>
-    </div>
-    <div id="content" class="container clearfix">
-        <div class="entry">
-        {{ site.posts[0].content }}
-        </div>
+        </header>
 
-        <div class="share-actions">
+    <article id="content">
+        <section class="entry">
+        {{ site.posts[0].content }}
+        </section>
+        <section class="share-actions">
             <a href="http://twitter.com/share"
                class="twitter-share-button"
-               data-url="http://blog.thethingdom.com{{ site.posts[0].url }}"
                data-text="{{ site.posts[0].title }}"
                data-count="none"
                data-via="TheThingdom"
@@ -32,6 +31,6 @@ title: Blog
                 href="http://blog.thethingdom.com{{ site.posts[0].url }}"
                 layout="button_count"
                 send="true"
-                style="top: -2px; margin-left: 2px;"></fb:like>
-        </div>
-    </div>
+                style="top: -3px; margin-left: 2px;"></fb:like>
+        </section>
+    </article>
