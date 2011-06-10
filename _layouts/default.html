@@ -23,40 +23,67 @@
     <link rel="stylesheet" href="http://www.thethingdom.com/styles/h5bp-base.css"/>
     <link rel="stylesheet" href="http://www.thethingdom.com/styles/common.css"/>
     <style>
+
+        /* elements */
         body {
             -webkit-text-size-adjust: none;
             -ms-text-size-adjust: none;
         }
 
-        .brand .title {
-            font-family: Georgia, serif;
-            font-weight: normal;
+        em {
             font-style: italic;
-            font-size: 2em;
-            padding: 0;
         }
 
-        .brand .meta {
-            bottom: 10px;
-            color: #9DADB3;
+        p {
+            margin: 1em 0;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        /* layout */
+        #container {
+            padding: 0 2em;
+            width: 640px;
+        }
+
+        #container header {
+            width: 100%;
+        }
+
+        #container footer {
+            text-align: center;
+            padding-top: 1em;
+        }
+
+        /* mobile */
+        @media only screen and (max-width: 767px) {
+            #container {
+                width: 250px;
+            }
+        }
+
+        /* XXX: visual adjustment for large logo */
+        @media only screen and (max-width: 767px) and (orientation:portrait) {
+            #container > header {
+                margin-left: -16px;
+            }
+        }
+
+        @media only screen and (min-width: 480px) and (max-width: 767px) {
+            #container {
+                width: 400px;
+            }
+        }
+
+        /* entry */
+        .meta {
             font-size: 90%;
-            position: absolute;
-            right: 2em;
+            margin-bottom: -12px;
         }
 
-        .brand {
-            padding: 1.8em 0;
-        }
-
-        .brand .container {
-            position: relative;
-        }
-
-        .brand a {
-            color: #3a464a;
-        }
-
-        .brand a:hover {
+        .title a:hover {
             text-decoration: none;
         }
 
@@ -65,38 +92,8 @@
             font: 115%/1.8 Georgia, serif;
         }
 
-        p {
-            margin: 1em 0;
-        }
-
-        .container {
-            padding: 0 2em;
-            width: 36em;
-        }
-
         .share-actions {
-            border-bottom: 1px solid #eee;
-            border-top: 1px solid #eee;
             padding: 1em 0;
-        }
-
-        footer {
-            font: 14px/1.8 Georgia, serif;
-            margin-top: 1em;
-            position: relative;
-            text-align: center;
-        }
-
-        @media only screen and (max-width: 767px) {
-            .container {
-                width: 250px;
-            }
-        }
-
-        @media only screen and (min-width: 480px) and (max-width: 767px) {
-            .container {
-                width: 400px;
-            }
         }
 
     </style>
