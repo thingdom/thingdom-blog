@@ -26,11 +26,14 @@ title: Blog
 
             <a href="http://twitter.com/share"
                class="twitter-share-button"
+               data-url="http://blog.thethingdom.com{{ post.url }}"
                data-text="{{ post.title }}"
                data-via="TheThingdom"
                data-related="TheThingdom:The Thingdom">Tweet</a>
 
-            <g:plusone size="medium"></g:plusone>
+            <g:plusone
+                size="medium"
+                href="http://blog.thethingdom.com{{ post.url }}"></g:plusone>
         </section>
 
     </article>
