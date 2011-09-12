@@ -88,12 +88,23 @@
         }
 
         .entry {
-            margin: 1.8em 0;
+            margin: -0.6em 0 1.8em;
             font: 115%/1.8 Georgia, serif;
         }
 
         .share-actions {
             padding: 1em 0;
+        }
+
+        #container article {
+            border-bottom:1px solid #eee;
+            margin-bottom: 1.6em
+        }
+
+        /* NOTE: Only works for CSS3 compliant browsers.
+                 Too lazy to introduce special CSS class ;) */
+        #container article:last-of-type {
+            border-bottom:none
         }
 
     </style>

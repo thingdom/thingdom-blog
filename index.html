@@ -2,25 +2,25 @@
 layout: default
 title: Blog
 ---
-    <!-- To create this page, copy _layouts/post.html and replace `page.` with `site.posts[0].` -->
-    <section>
+{% for post in site.posts %}
+    <!-- To create this page, copy _layouts/post.html and replace `page.` with `post.` -->
+    <article>
         <header>
-            <h4 class="meta">{{ site.posts[0].date | date: '%B %e, %Y' }}</h4>
+            <h4 class="meta">{{ post.date | date: '%B %e, %Y' }}</h4>
             <h1 class="title">
-                <a href="{{ site.posts[0].url }}" rel="bookmark" title="Permanent Link: {{ site.posts[0].title }}">
-                    {{ site.posts[0].title }}
+                <a href="{{ post.url }}" rel="bookmark" title="Permanent Link: {{ post.title }}">
+                    {{ post.title }}
                 </a>
             </h1>
         </header>
 
-    <article id="content">
         <section class="entry">
-        {{ site.posts[0].content }}
+        {{ post.content }}
         </section>
         <section class="share-actions">
             <a href="http://twitter.com/share"
                class="twitter-share-button"
-               data-text="{{ site.posts[0].title }}"
+               data-text="{{ post.title }}"
                data-count="none"
                data-via="TheThingdom"
                data-related="aseemk:gasi">Tweet</a>
@@ -33,4 +33,6 @@ title: Blog
                 send="true"
                 style="top: -3px; margin-left: 2px;"></fb:like>
         </section>
+
     </article>
+{% endfor %}
