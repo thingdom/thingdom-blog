@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-    <section>
+    <article id="content">
         <header>
             <h4 class="meta">{{ page.date | date: '%B %e, %Y' }}</h4>
             <h1 class="title">
@@ -11,14 +11,11 @@ layout: default
             </h1>
         </header>
 
-    <article id="content">
         <section class="entry">
         {{ content }}
         </section>
         <section class="share-actions">
-            <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
             <fb:like
-                href="http://blog.thethingdom.com{{ page.url }}"
                 layout="button_count"
                 width="90"
                 style="top: -3px;"></fb:like>
@@ -26,19 +23,10 @@ layout: default
             <a href="http://twitter.com/share"
                class="twitter-share-button"
                data-text="{{ page.title }}"
-               data-count="none"
                data-via="TheThingdom"
                data-related="TheThingdom:The Thingdom">Tweet</a>
-            <script async type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 
             <g:plusone size="medium"></g:plusone>
-            <script type="text/javascript">
-              (function() {
-                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                po.src = 'https://apis.google.com/js/plusone.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-              })();
-            </script>
         </section>
 
     </article>

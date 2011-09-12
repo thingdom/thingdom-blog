@@ -48,11 +48,11 @@
             width: 640px;
         }
 
-        #container header {
+        #container > header {
             width: 100%;
         }
 
-        #container footer {
+        #container > footer {
             text-align: center;
             padding-top: 1em;
         }
@@ -78,6 +78,11 @@
         }
 
         /* entry */
+        article > header {
+            /* XXX FIXME common.css hardcodes height for *all* headers! */
+            height: auto !important;
+        }
+
         .meta {
             font-size: 90%;
             margin-bottom: -12px;
@@ -134,5 +139,16 @@
             <a href="http://www.thethingdom.com/">The Thingdom</a> © 2011
         </footer>
     </div>
+
+    <!-- share scripts (all async), only one of each needed across all buttons -->
+    <script async src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+    <script async type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script type="text/javascript">
+      (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+      })();
+    </script>
 </body>
 </html>
