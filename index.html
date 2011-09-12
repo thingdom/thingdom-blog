@@ -2,35 +2,39 @@
 layout: default
 title: Blog
 ---
-    <!-- To create this page, copy _layouts/post.html and replace `page.` with `site.posts[0].` -->
-    <section>
+{% for post in site.posts %}
+    <!-- To create this page, copy _layouts/post.html and replace `page.` with `post.` -->
+    <article>
         <header>
-            <h4 class="meta">{{ site.posts[0].date | date: '%B %e, %Y' }}</h4>
+            <h4 class="meta">{{ post.date | date: '%B %e, %Y' }}</h4>
             <h1 class="title">
-                <a href="{{ site.posts[0].url }}" rel="bookmark" title="Permanent Link: {{ site.posts[0].title }}">
-                    {{ site.posts[0].title }}
+                <a href="{{ post.url }}" rel="bookmark" title="Permanent Link: {{ post.title }}">
+                    {{ post.title }}
                 </a>
             </h1>
         </header>
 
-    <article id="content">
         <section class="entry">
-        {{ site.posts[0].content }}
+        {{ post.content }}
         </section>
         <section class="share-actions">
+            <fb:like
+                href="http://blog.thethingdom.com{{ post.url }}"
+                layout="button_count"
+                width="90px"
+                style="top: -3px;"></fb:like>
+
             <a href="http://twitter.com/share"
                class="twitter-share-button"
-               data-text="{{ site.posts[0].title }}"
-               data-count="none"
+               data-url="http://blog.thethingdom.com{{ post.url }}"
+               data-text="{{ post.title }}"
                data-via="TheThingdom"
-               data-related="aseemk:gasi">Tweet</a>
-            <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+               data-related="TheThingdom:The Thingdom">Tweet</a>
 
-            <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
-            <fb:like
-                href="http://blog.thethingdom.com{{ site.posts[0].url }}"
-                layout="button_count"
-                send="true"
-                style="top: -3px; margin-left: 2px;"></fb:like>
+            <g:plusone
+                size="medium"
+                href="http://blog.thethingdom.com{{ post.url }}"></g:plusone>
         </section>
+
     </article>
+{% endfor %}
