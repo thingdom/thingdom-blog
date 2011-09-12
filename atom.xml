@@ -4,13 +4,13 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-    <title>Thingdom Blog</title>
+    <title>The Thingdom – Blog</title>
     <link href="http://blog.thethingdom.com/atom.xml" rel="self"/>
     <link href="http://blog.thethingdom.com/"/>
     <updated>{{ site.time | date_to_xmlschema }}</updated>
     <id>http://blog.thethingdom.com/</id>
     <author>
-        <name>Thingdom</name>
+        <name>The Thingdom</name>
         <email>info@thethingdom.com</email>
     </author>
 
