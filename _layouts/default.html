@@ -38,43 +38,50 @@
             margin: 1em 0;
         }
 
+        ol, ul {
+            margin-left: 2em;
+        }
+
         ul {
             list-style-type: square;
         }
 
         /* layout */
-        #container {
-            padding: 0 2em;
-            width: 640px;
-        }
-
-        #container > header {
+        html {
+            /* explicitly set to viewport width; important for mobile. */
             width: 100%;
         }
 
-        #container > footer {
+        body {
+            /** explicitly say this should generally fill the html width,
+                except no more than 640px. common.css sets 15px padding. */
+            width: auto;
+            max-width: 640px;
+        }
+
+        body > header {
+        }
+
+        body > article {
+            /* override the default blueprint span-18 from common.css */
+            float: none;
+            width: auto;
+            margin: 0;
+
+            border-bottom:1px solid #eee;
+            margin-bottom: 3em
+        }
+
+        /* NOTE: Only works for CSS3 compliant browsers.
+                 Too lazy to introduce special CSS class ;) */
+        body > article:last-of-type {
+            border-bottom:none
+        }
+
+        body > footer {
             text-align: center;
             padding-top: 1em;
-        }
-
-        /* mobile */
-        @media only screen and (max-width: 767px) {
-            #container {
-                width: 250px;
-            }
-        }
-
-        /* XXX: visual adjustment for large logo */
-        @media only screen and (max-width: 767px) and (orientation:portrait) {
-            #container > header {
-                margin-left: -16px;
-            }
-        }
-
-        @media only screen and (min-width: 480px) and (max-width: 767px) {
-            #container {
-                width: 400px;
-            }
+            padding-bottom: 2em;
         }
 
         /* entry */
@@ -101,17 +108,6 @@
             padding: 1em 0;
         }
 
-        #container article {
-            border-bottom:1px solid #eee;
-            margin-bottom: 1.6em
-        }
-
-        /* NOTE: Only works for CSS3 compliant browsers.
-                 Too lazy to introduce special CSS class ;) */
-        #container article:last-of-type {
-            border-bottom:none
-        }
-
     </style>
 
     <script type="text/javascript">
@@ -128,17 +124,15 @@
     </script>
 </head>
 <body>
-    <div id="container">
-        <header>
-            <div id="logo">
-                <a href="/"><img src="/images/logo-239x34.png" width="239" height="34" alt="The Thingdom"></a>
-            </div>
-        </header>
-        {{ content }}
-        <footer class="container">
-            <a href="http://www.thethingdom.com/">The Thingdom</a> © 2011
-        </footer>
-    </div>
+    <header>
+        <div id="logo">
+            <a href="/"><img src="/images/logo-239x34.png" width="239" height="34" alt="The Thingdom"></a>
+        </div>
+    </header>
+    {{ content }}
+    <footer class="container">
+        <a href="http://www.thethingdom.com/">The Thingdom</a> © 2011
+    </footer>
 
     <!-- share scripts (all async), only one of each needed across all buttons -->
     <script async src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
