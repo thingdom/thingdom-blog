@@ -47,9 +47,16 @@
         }
 
         /* layout */
+        html {
+            /* explicitly set to viewport width; important for mobile. */
+            width: 100%;
+        }
+
         body {
-            padding: 0 2em;
-            width: 640px;
+            /** explicitly say this should generally fill the html width,
+                except no more than 640px. common.css sets 15px padding. */
+            width: auto;
+            max-width: 640px;
         }
 
         body > header {
@@ -75,26 +82,6 @@
             text-align: center;
             padding-top: 1em;
             padding-bottom: 2em;
-        }
-
-        /* mobile */
-        @media only screen and (max-width: 767px) {
-            body {
-                width: 250px;
-            }
-        }
-
-        /* XXX: visual adjustment for large logo */
-        @media only screen and (max-width: 767px) and (orientation:portrait) {
-            body > header {
-                margin-left: -16px;
-            }
-        }
-
-        @media only screen and (min-width: 480px) and (max-width: 767px) {
-            body {
-                width: 400px;
-            }
         }
 
         /* entry */
