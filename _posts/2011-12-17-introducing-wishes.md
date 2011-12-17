@@ -7,7 +7,7 @@ With the holidays coming up, we heard from some of you that you wanted a way
 to highlight and share just the things you *really* want.
 Today, we're releasing "wishes", which lets you do just that.
 
-To "wish" for something, login to **[The Thingdom](thingdom)** and click the
+To "wish" for something, login to **[The Thingdom][thingdom]** and click the
 **Profile** link at the top. Then move your mouse over something you want,
 and click the star that appears above it:
 
