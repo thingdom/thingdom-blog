@@ -32,9 +32,9 @@ As always, we welcome your feedback: [email][email] / [forum][forum].
 
 [thingdom]: http://www.thethingdom.com/
 
-[img-how-to-wish]: /images/wishes/how-to-wish.png
-[img-wish]: /images/wishes/wish.png
-[img-wishlist]: /images/wishes/wishlist.png
+[img-how-to-wish]: /images/screenshots/how-to-wish.png
+[img-wish]: /images/screenshots/wish.png
+[img-wishlist]: /images/screenshots/wishlist.png
 
 [email]: mailto:feedback@thethingdom.com
 [forum]: http://thingdom.uservoice.com/
